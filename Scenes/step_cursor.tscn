@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://pc6g8ctvddwu"]
+
+[ext_resource type="Texture2D" uid="uid://bldeggm8k6bcy" path="res://Sprites/UICursor.png" id="1_ooob0"]
+
+[node name="Step_cursor" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ooob0")
+centered = false
+region_enabled = true
+region_rect = Rect2(101, 3, 97, 94)

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://283buij3sjwm"]
+
+[ext_resource type="Script" path="res://Scripts/figures/black/rock_black.gd" id="1_7lhh5"]
+[ext_resource type="Texture2D" uid="uid://brwux7namcjbc" path="res://Sprites/Shadow.png" id="1_saxck"]
+[ext_resource type="Texture2D" uid="uid://b4go7ckkrq21q" path="res://Sprites/Figures.png" id="2_nqyib"]
+
+[node name="Rock black" type="Node2D"]
+z_index = 2
+script = ExtResource("1_7lhh5")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+position = Vector2(50, 82)
+scale = Vector2(0.526667, 0.203333)
+texture = ExtResource("1_saxck")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_nqyib")
+centered = false
+offset = Vector2(20, -10)
+region_enabled = true
+region_rect = Rect2(405, 160, 54, 97)

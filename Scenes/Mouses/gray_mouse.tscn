@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckygw5034xawn"]
+
+[ext_resource type="Script" path="res://Scripts/looking_mouse.gd" id="1_5mppm"]
+[ext_resource type="Texture2D" uid="uid://dsncpgus3un1s" path="res://Sprites/Mouses.png" id="2_kherm"]
+
+[node name="Gray mouse" type="Node2D"]
+script = ExtResource("1_5mppm")
+
+[node name="Mouse sprite" type="Sprite2D" parent="."]
+position = Vector2(-2, -35)
+texture = ExtResource("2_kherm")
+region_enabled = true
+region_rect = Rect2(420, 12, 161, 175)

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://p1rylkxq7amh"]
+
+[ext_resource type="Texture2D" uid="uid://b4go7ckkrq21q" path="res://Sprites/Figures.png" id="1_2wbs4"]
+[ext_resource type="Texture2D" uid="uid://brwux7namcjbc" path="res://Sprites/Shadow.png" id="1_n86sd"]
+[ext_resource type="Script" path="res://Scripts/figures/white/queen_white.gd" id="1_uygoi"]
+
+[node name="Queen white" type="Node2D"]
+z_index = 2
+script = ExtResource("1_uygoi")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+position = Vector2(50, 84)
+scale = Vector2(0.553333, 0.201667)
+texture = ExtResource("1_n86sd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_2wbs4")
+centered = false
+offset = Vector2(20, -30)
+region_enabled = true
+region_rect = Rect2(102, 12, 58, 116)

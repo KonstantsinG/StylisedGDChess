@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2xd1cd3l3gvp"]
+
+[ext_resource type="Texture2D" uid="uid://brwux7namcjbc" path="res://Sprites/Shadow.png" id="1_eddvu"]
+[ext_resource type="Script" path="res://Scripts/figures/black/king_black.gd" id="1_soyca"]
+[ext_resource type="Texture2D" uid="uid://b4go7ckkrq21q" path="res://Sprites/Figures.png" id="2_yag7w"]
+
+[node name="King black" type="Node2D"]
+z_index = 2
+script = ExtResource("1_soyca")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+position = Vector2(50, 80)
+scale = Vector2(0.606667, 0.256667)
+texture = ExtResource("1_eddvu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_yag7w")
+centered = false
+offset = Vector2(20, -40)
+region_enabled = true
+region_rect = Rect2(0, 131, 60, 127)

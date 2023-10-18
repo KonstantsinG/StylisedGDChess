@@ -1,0 +1,311 @@
+[gd_scene load_steps=21 format=3 uid="uid://4bqm48tct1vs"]
+
+[ext_resource type="Texture2D" uid="uid://djfw2if6yw2l0" path="res://Sprites/ChessBoard.png" id="1_agcts"]
+[ext_resource type="Script" path="res://Scripts/play_board.gd" id="1_gsc48"]
+[ext_resource type="Texture2D" uid="uid://bldeggm8k6bcy" path="res://Sprites/UICursor.png" id="2_evtri"]
+[ext_resource type="Texture2D" uid="uid://fs4n21srtfsu" path="res://Sprites/Hand.png" id="3_5bw2k"]
+[ext_resource type="PackedScene" uid="uid://b1xdavwcx6t3g" path="res://Scenes/Phisycs board/cell.tscn" id="3_poxew"]
+[ext_resource type="PackedScene" uid="uid://ckygw5034xawn" path="res://Scenes/Mouses/gray_mouse.tscn" id="4_36fwx"]
+[ext_resource type="PackedScene" uid="uid://283buij3sjwm" path="res://Scenes/Figures/rock_black.tscn" id="4_efelx"]
+[ext_resource type="PackedScene" uid="uid://btclthit0ctju" path="res://Scenes/Figures/horse_black.tscn" id="5_p6p01"]
+[ext_resource type="PackedScene" uid="uid://dqt2j3hgjrcf4" path="res://Scenes/Mouses/brown_mouse.tscn" id="5_vogop"]
+[ext_resource type="PackedScene" uid="uid://b376la5s155y1" path="res://Scenes/Figures/beshop_black.tscn" id="6_bsmvs"]
+[ext_resource type="PackedScene" uid="uid://dibsmwhc3i56o" path="res://Scenes/Mouses/judge_mouse.tscn" id="6_yd8b1"]
+[ext_resource type="PackedScene" uid="uid://ds7kyfukxk3bv" path="res://Scenes/Figures/queen_black.tscn" id="7_ih7vl"]
+[ext_resource type="PackedScene" uid="uid://b2xd1cd3l3gvp" path="res://Scenes/Figures/king_black.tscn" id="8_0474j"]
+[ext_resource type="PackedScene" uid="uid://0oc584u86n54" path="res://Scenes/Figures/pawn_black.tscn" id="9_0empq"]
+[ext_resource type="PackedScene" uid="uid://dl21qe71fj8w8" path="res://Scenes/Figures/pawn_white.tscn" id="10_vkfmx"]
+[ext_resource type="PackedScene" uid="uid://bsyp1c5ebk53c" path="res://Scenes/Figures/rock_white.tscn" id="11_f08uj"]
+[ext_resource type="PackedScene" uid="uid://bb0oxrxattn5x" path="res://Scenes/Figures/horse_white.tscn" id="12_cara0"]
+[ext_resource type="PackedScene" uid="uid://c30f172t36rm6" path="res://Scenes/Figures/beshop_white.tscn" id="13_15bjc"]
+[ext_resource type="PackedScene" uid="uid://p1rylkxq7amh" path="res://Scenes/Figures/queen_white.tscn" id="14_f70bm"]
+[ext_resource type="PackedScene" uid="uid://b2bkjiuxc02lm" path="res://Scenes/Figures/king_white.tscn" id="15_0bqke"]
+
+[node name="Play board" type="Node2D"]
+script = ExtResource("1_gsc48")
+
+[node name="Board sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_agcts")
+centered = false
+
+[node name="Board" type="Control" parent="."]
+custom_minimum_size = Vector2(800, 800)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 555.0
+offset_top = 143.0
+offset_right = 1355.0
+offset_bottom = 943.0
+
+[node name="1" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="Rock black" parent="Board/1" instance=ExtResource("4_efelx")]
+
+[node name="2" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="Horse black" parent="Board/2" instance=ExtResource("5_p6p01")]
+position = Vector2(100, 0)
+
+[node name="3" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="Beshop black" parent="Board/3" instance=ExtResource("6_bsmvs")]
+position = Vector2(200, 0)
+
+[node name="4" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="Queen black" parent="Board/4" instance=ExtResource("7_ih7vl")]
+position = Vector2(300, 0)
+
+[node name="5" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="King black" parent="Board/5" instance=ExtResource("8_0474j")]
+position = Vector2(400, 0)
+
+[node name="6" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="Beshop black" parent="Board/6" instance=ExtResource("6_bsmvs")]
+position = Vector2(500, 0)
+
+[node name="7" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="Horse black" parent="Board/7" instance=ExtResource("5_p6p01")]
+position = Vector2(600, 0)
+
+[node name="8" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="Rock black" parent="Board/8" instance=ExtResource("4_efelx")]
+position = Vector2(700, 0)
+
+[node name="9" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="Pawn black" parent="Board/9" instance=ExtResource("9_0empq")]
+position = Vector2(0, 100)
+
+[node name="10" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="Pawn black" parent="Board/10" instance=ExtResource("9_0empq")]
+position = Vector2(100, 100)
+
+[node name="11" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="Pawn black" parent="Board/11" instance=ExtResource("9_0empq")]
+position = Vector2(200, 100)
+
+[node name="12" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="Pawn black" parent="Board/12" instance=ExtResource("9_0empq")]
+position = Vector2(300, 100)
+
+[node name="13" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="Pawn black" parent="Board/13" instance=ExtResource("9_0empq")]
+position = Vector2(400, 100)
+
+[node name="14" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="Pawn black" parent="Board/14" instance=ExtResource("9_0empq")]
+position = Vector2(500, 100)
+
+[node name="15" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="Pawn black" parent="Board/15" instance=ExtResource("9_0empq")]
+position = Vector2(600, 100)
+
+[node name="16" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="Pawn black" parent="Board/16" instance=ExtResource("9_0empq")]
+position = Vector2(700, 100)
+
+[node name="17" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="18" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="19" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="20" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="21" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="22" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="23" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="24" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="25" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="26" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="27" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="28" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="29" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="30" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="31" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="32" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="33" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="34" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="35" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="36" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="37" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="38" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="39" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="40" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="41" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="42" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="43" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="44" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="45" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="46" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="47" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="48" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="49" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="Pawn white" parent="Board/49" instance=ExtResource("10_vkfmx")]
+position = Vector2(700, 600)
+
+[node name="50" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="Pawn white" parent="Board/50" instance=ExtResource("10_vkfmx")]
+position = Vector2(600, 600)
+
+[node name="51" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="Pawn white" parent="Board/51" instance=ExtResource("10_vkfmx")]
+position = Vector2(500, 600)
+
+[node name="52" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="Pawn white" parent="Board/52" instance=ExtResource("10_vkfmx")]
+position = Vector2(400, 600)
+
+[node name="53" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="Pawn white" parent="Board/53" instance=ExtResource("10_vkfmx")]
+position = Vector2(300, 600)
+
+[node name="54" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="Pawn white" parent="Board/54" instance=ExtResource("10_vkfmx")]
+position = Vector2(200, 600)
+
+[node name="55" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="Pawn white" parent="Board/55" instance=ExtResource("10_vkfmx")]
+position = Vector2(100, 600)
+
+[node name="56" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="Pawn white" parent="Board/56" instance=ExtResource("10_vkfmx")]
+position = Vector2(0, 600)
+
+[node name="57" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="Rock white" parent="Board/57" instance=ExtResource("11_f08uj")]
+position = Vector2(0, 700)
+
+[node name="58" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="Horse white" parent="Board/58" instance=ExtResource("12_cara0")]
+position = Vector2(100, 700)
+
+[node name="59" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="Beshop white" parent="Board/59" instance=ExtResource("13_15bjc")]
+position = Vector2(200, 700)
+
+[node name="60" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="Queen white" parent="Board/60" instance=ExtResource("14_f70bm")]
+position = Vector2(300, 700)
+
+[node name="61" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="King white" parent="Board/61" instance=ExtResource("15_0bqke")]
+position = Vector2(400, 700)
+
+[node name="62" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="Beshop white" parent="Board/62" instance=ExtResource("13_15bjc")]
+position = Vector2(500, 700)
+
+[node name="63" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="Horse white" parent="Board/63" instance=ExtResource("12_cara0")]
+position = Vector2(600, 700)
+
+[node name="64" parent="Board" instance=ExtResource("3_poxew")]
+
+[node name="Rock white" parent="Board/64" instance=ExtResource("11_f08uj")]
+position = Vector2(700, 700)
+
+[node name="Cursors" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 606.0
+offset_top = 193.0
+offset_right = 606.0
+offset_bottom = 193.0
+mouse_filter = 2
+
+[node name="CellCursor" type="Sprite2D" parent="Cursors"]
+z_index = 1
+texture = ExtResource("2_evtri")
+region_enabled = true
+region_rect = Rect2(0, 0, 97, 100)
+
+[node name="Hand" type="Sprite2D" parent="Cursors"]
+z_index = 3
+position = Vector2(484, 637)
+texture = ExtResource("3_5bw2k")
+offset = Vector2(52, 250)
+
+[node name="StepCursors" type="Control" parent="Cursors"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Mouses" type="Node2D" parent="."]
+
+[node name="Gray mouse" parent="Mouses" instance=ExtResource("4_36fwx")]
+position = Vector2(455, 729)
+
+[node name="Gray mouse2" parent="Mouses" instance=ExtResource("4_36fwx")]
+position = Vector2(1600, 827)
+
+[node name="Gray mouse3" parent="Mouses" instance=ExtResource("4_36fwx")]
+position = Vector2(1846, 553)
+
+[node name="Brown mouse" parent="Mouses" instance=ExtResource("5_vogop")]
+position = Vector2(430, 313)
+
+[node name="Brown mouse2" parent="Mouses" instance=ExtResource("5_vogop")]
+position = Vector2(1606, 629)
+
+[node name="Judge mouse" parent="Mouses" instance=ExtResource("6_yd8b1")]
+position = Vector2(1796, 365)

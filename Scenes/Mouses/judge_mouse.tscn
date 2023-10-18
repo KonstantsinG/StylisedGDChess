@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dibsmwhc3i56o"]
+
+[ext_resource type="Script" path="res://Scripts/looking_mouse.gd" id="1_55l5f"]
+[ext_resource type="Texture2D" uid="uid://dsncpgus3un1s" path="res://Sprites/Mouses.png" id="2_fg57v"]
+
+[node name="Judge mouse" type="Node2D"]
+script = ExtResource("1_55l5f")
+
+[node name="Mouse sprite" type="Sprite2D" parent="."]
+position = Vector2(-2, -33)
+texture = ExtResource("2_fg57v")
+region_enabled = true
+region_rect = Rect2(220, 15, 159, 169)

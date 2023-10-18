@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://btclthit0ctju"]
+
+[ext_resource type="Texture2D" uid="uid://brwux7namcjbc" path="res://Sprites/Shadow.png" id="1_1ortj"]
+[ext_resource type="Script" path="res://Scripts/figures/black/horse_black.gd" id="1_do0y6"]
+[ext_resource type="Texture2D" uid="uid://b4go7ckkrq21q" path="res://Sprites/Figures.png" id="2_o02gk"]
+
+[node name="Horse black" type="Node2D"]
+z_index = 2
+script = ExtResource("1_do0y6")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+position = Vector2(48, 81)
+scale = Vector2(0.594167, 0.2475)
+texture = ExtResource("1_1ortj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_o02gk")
+centered = false
+offset = Vector2(20, -5)
+region_enabled = true
+region_rect = Rect2(309, 161, 52, 92)

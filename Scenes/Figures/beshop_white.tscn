@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://c30f172t36rm6"]
+
+[ext_resource type="Texture2D" uid="uid://brwux7namcjbc" path="res://Sprites/Shadow.png" id="1_3ena7"]
+[ext_resource type="Script" path="res://Scripts/figures/white/beshop_white.gd" id="1_l81ox"]
+[ext_resource type="Texture2D" uid="uid://b4go7ckkrq21q" path="res://Sprites/Figures.png" id="2_tokry"]
+
+[node name="Beshop white" type="Node2D"]
+z_index = 2
+script = ExtResource("1_l81ox")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+position = Vector2(50, 82)
+scale = Vector2(0.588333, 0.231667)
+texture = ExtResource("1_3ena7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_tokry")
+centered = false
+offset = Vector2(20, -25)
+region_enabled = true
+region_rect = Rect2(207, 16, 57, 110)
